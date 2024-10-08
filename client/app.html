@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bengaluru Home Price Predict</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;
+    0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;
+    1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="form-title">Bengaluru Home Price Prediction</h1>
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <h2>Area (Square Feet)</h2>
+            <input  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000" type="text"
+                    id="Luas Area"
+                    name="luas Area"
+                    placeholder="Enter Full Name"/>
+          </div>
+          <div class="user-input-box">
+            <h2>Location</h2>
+             <select class="location" name="" id="uiLocations">
+                <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+             </select>
+          </div>
+          <div class="user-input-box">
+            <h2>BHK(Bedroom, Hall, Kitchen)</h2>
+            <div class="switch-field">
+              <input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
+              <label for="radio-bhk-1">1</label>
+              <input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
+              <label for="radio-bhk-2">2</label>
+              <input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
+              <label for="radio-bhk-3">3</label>
+              <input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
+              <label for="radio-bhk-4">4</label>
+              <input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
+              <label for="radio-bhk-5">5</label>
+	        </div>
+          </div>
+          <div class="user-input-box">
+            <h2>Bathroom</h2>
+              <div class="switch-field">
+                  <input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
+                  <label for="radio-bath-1">1</label>
+                  <input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
+                  <label for="radio-bath-2">2</label>
+                  <input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
+                  <label for="radio-bath-3">3</label>
+                  <input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
+                  <label for="radio-bath-4">4</label>
+                  <input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
+                  <label for="radio-bath-5">5</label>
+              </div>
+          </div>
+        </div>
+<!--        <div class="gender-details-box">-->
+<!--          <span class="gender-title">Gender</span>-->
+<!--          <div class="gender-category">-->
+<!--            <input type="radio" name="gender" id="male">-->
+<!--            <label for="male">Male</label>-->
+<!--            <input type="radio" name="gender" id="female">-->
+<!--            <label for="female">Female</label>-->
+<!--            <input type="radio" name="gender" id="other">-->
+<!--            <label for="other">Other</label>-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="form-submit-btn">
+          <button type="submit" onclick="onClickedEstimatePrice()" type="button">Estimated Now!</button>
+        </div>
+        <div id="uiEstimatedPrice" class="result"><h2></h2></div>
+    </div>
+  </body>
+</html>
